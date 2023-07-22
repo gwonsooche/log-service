@@ -1,4 +1,7 @@
-const AMQP_SERVER = 'localhost';
+// The string must match the service name for the RabbitMQ server under the
+// `services:` root element in docker-compose.yml. It was 'localhost' before
+// containerization.
+const AMQP_SERVER = 'rabbitmq-server';
 
 const RABBIT_MQ = Object.freeze({
   URL: `amqp://${AMQP_SERVER}`,
